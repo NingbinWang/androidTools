@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+  	android:focusableInTouchMode="true" 
+  	>
+
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_size"
+        android:textSize="18dp"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="10dp"
+        />
+     
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_unit_size"
+        android:textSize="18dp"
+        android:layout_marginLeft="220dp"
+        />
+    <!--
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_micro_sdcard"
+         android:textSize="18dp"
+          android:layout_marginLeft="10dp"
+        />
+    
+     <EditText
+        android:id="@+id/editText_micro_sdcard_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:textSize="18dp"
+        android:hint="@string/hint_currentfile_size"
+         android:layout_marginLeft="10dp" />
+    -->
+     
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_externel_sdcard"
+        android:textSize="18dp"
+         android:layout_marginLeft="10dp"
+        />
+    
+     <EditText
+        android:id="@+id/editText_externel_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:textSize="18dp" 
+        android:hint="@string/hint_currentfile_size"
+         android:layout_marginLeft="10dp"
+        />
+     
+     
+  
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_count"
+        android:textSize="18dp" 
+        android:textColor="@color/blue"
+         android:layout_marginLeft="10dp"
+        />
+     <!--
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_micro_sdcard"
+         android:textSize="18dp"
+          android:layout_marginLeft="10dp"
+        />
+     
+     <EditText
+        android:id="@+id/editfile_micro_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:hint="@string/hint_file_count" 
+        android:inputType="number"
+        android:textSize="18dp"
+         android:layout_marginLeft="10dp" />
+    -->
+ 
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_file_externel_sdcard"
+        android:textSize="18dp"
+         android:layout_marginLeft="10dp"
+        />
+      
+      <EditText
+        android:id="@+id/editfile_externel_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:hint="@string/hint_file_count" 
+        android:inputType="number"
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp" />
+    
+	
+</LinearLayout>

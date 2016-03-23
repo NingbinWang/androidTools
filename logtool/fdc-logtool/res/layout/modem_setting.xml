@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    
+    <RadioButton
+        android:id="@+id/radioButtonLevelbb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/modem_level_bb" 
+        android:layout_marginLeft="10dp"/>
+        
+    <RadioButton
+        android:id="@+id/radioButtonLevel3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/modem_level_bb_3g" 
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonCompact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Compact_log" 
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonLeveldigrf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/modem_level_bb_3g_digrf"
+        android:layout_marginLeft="10dp" />
+    
+   <RadioButton
+        android:id="@+id/radioButtonLeveldigrf1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_audio_pcm"
+        android:layout_marginLeft="10dp" />
+
+</RadioGroup>
+<!--
+    <CheckBox
+	    android:id="@+id/check_audio_pcm"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_audio_pcm"
+	    />
+    
+    <CheckBox
+	    android:id="@+id/check_audio_i2s"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_audio_i2s"
+	    />
+    
+     <CheckBox
+	    android:id="@+id/check_audio_i2s_pcm"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_audio_i2s_pcm"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+	    />
+
+     <CheckBox
+	    android:id="@+id/check_system_at_proxy"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_audio_i2s_pcm"
+        
+	    />
+-->
+<!--     <Spinner -->
+<!--         android:id="@+id/spinnnerOpenPort" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:entries="@array/modem_open_port"  -->
+<!--          > -->
+<!--     </Spinner> -->
+    
+</LinearLayout>

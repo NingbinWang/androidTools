@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gainsboro">#dcdcdc</color>
+    <color name="snow">#8b8989</color>
+      <drawable name="transparent">#00000000</drawable>
+         <color name="blue">#0000ff</color>
+    
+</resources>

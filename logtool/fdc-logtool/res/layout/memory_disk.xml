@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    
+ 	<RelativeLayout 
+ 	     android:layout_width="match_parent"
+       	 android:layout_height="@dimen/title_text_height"
+ 	    >
+ 	    
+ 	    
+ 	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/memory_disk"
+	        android:textColor="@color/snow"
+	        android:textSize="@dimen/title_text_size"
+	        android:layout_marginLeft="10dp"
+	        android:layout_centerVertical="true"/>
+ 	    
+ 	</RelativeLayout>
+    	
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/meminfo_layout">
+
+        <ImageView 
+ 	        android:id="@+id/title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/meminfo_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/title_icon" />
+
+        <Switch
+            android:id="@+id/meminfo_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/procrank_layout">
+
+        <ImageView 
+ 	        android:id="@+id/procrank_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/procrank_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/procrank_title_icon" />
+
+        <Switch
+            android:id="@+id/procrank_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+     
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+     
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/top_layout">
+
+        <ImageView 
+ 	        android:id="@+id/top_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/top_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/top_title_icon" />
+
+        <Switch
+            android:id="@+id/top_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+     
+     
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+     
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/disk_layout">
+
+        <ImageView 
+ 	        android:id="@+id/disk_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/disk_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/disk_title_icon" />
+
+        <Switch
+            android:id="@+id/disk_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+   
+     
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/cpu_layout">
+
+        <ImageView 
+ 	        android:id="@+id/cpu_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/cpu_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/cpu_title_icon" />
+
+        <Switch
+            android:id="@+id/cpu_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+        
+        
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/cpuloading_layout">
+
+        <ImageView 
+ 	        android:id="@+id/cpuloading_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/cpu_loading_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/cpuloading_title_icon" />
+
+        <Switch
+            android:id="@+id/cpuloading_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+        
+        
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+</LinearLayout>

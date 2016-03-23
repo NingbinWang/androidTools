@@ -1,0 +1,20 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#VersionNumber:201510190000 VersionCode:2 VersionName:v1.1
+#Owner:ward_du Detiles as below
+#
+
+1.Add collecting BT snoop log function in menu--network--BT Log
+
+2.Add New version control rule as below:
+	a."version_number" in strings.xml to mark build date,ect:201510190000
+	b.android:versionCode&android:versionName in Androidmanifest.xml to update logtool version
+
+3.Update QPSTDownload mode UI layout, avoid old UI influncing BT UI layout
+
+4.Place logtool related files(like shell,*.rc,service sourcecode) in /asset source folder,
+thus will be easy to get and arrange
+
+5.Remove amax uploader log source code in logtool
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

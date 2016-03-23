@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    
+    <RadioButton
+        android:id="@+id/btnLevelDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_level_default" 
+        android:layout_marginLeft="10dp"/>
+        
+    <RadioButton
+        android:id="@+id/btnLevelVerbose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_level_verbose" 
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:id="@+id/btnLevelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_level_Info"
+        android:layout_marginLeft="10dp" />
+
+    <RadioButton
+        android:id="@+id/btnLevelWarn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_level_warn"
+        android:layout_marginLeft="10dp" />
+    
+      <RadioButton
+        android:id="@+id/btnLevelCritical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_level_critical"
+        android:layout_marginLeft="10dp" />
+</RadioGroup>
+</LinearLayout>

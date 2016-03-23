@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_command"
+		android:textColor="#FFFFFF"
+		android:background="#000000"
+        android:text="@string/no_thing"
+		android:gravity="bottom"
+        android:scrollbars="vertical" />
+    
+	
+	 <AutoCompleteTextView
+	    android:layout_marginTop="10dp"
+        android:id="@+id/input_command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_layout"
+        android:ems="10"
+        android:text="@string/at_plus"
+        android:capitalize="characters"
+         />
+	 
+	 <!-- 
+	<EditText
+	    android:id="@+id/input_command"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:layout_above="@+id/cancel"
+	    android:inputType="textNoSuggestions" />
+ -->
+ 
+ <LinearLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:orientation="horizontal"
+     android:id="@+id/send_layout"
+     >
+     <Button
+        android:id="@+id/send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/send" />
+     
+     <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/clear_log" />
+     
+     <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/cancel" />
+     
+      <Button
+        android:id="@+id/audioTest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/audio_log" />
+      
+       <Button
+        android:id="@+id/mo_mt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/mo_mt" />
+       
+        <Button
+        android:id="@+id/modem_log_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       	android:layout_weight="1"
+        android:text="@string/Modem_log_state" />
+     
+ </LinearLayout>
+ 
+ <!-- 
+	<Button
+        android:id="@+id/cancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/cancel" />
+	
+	<Button
+        android:id="@+id/clear"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cancel"
+        android:layout_alignParentBottom="true"
+        android:text="@string/clear_log" />
+
+	<Button
+        android:id="@+id/send"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/clear"
+        android:layout_alignParentBottom="true"
+        android:text="@string/send" /> -->
+</RelativeLayout> 

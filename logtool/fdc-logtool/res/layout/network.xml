@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    
+ 
+    <RelativeLayout 
+ 	     android:layout_width="match_parent"
+       	 android:layout_height="@dimen/title_text_height"
+ 	    >
+ 	    
+ 	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/network"
+	        android:textColor="@color/snow"
+	        android:textSize="@dimen/title_text_size"
+	        android:layout_marginLeft="10dp"
+	        android:layout_centerVertical="true"/>
+ 	    
+ 	</RelativeLayout>
+  
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+       	android:id="@+id/tcpdump_layout" >
+
+        <ImageView 
+ 	        android:id="@+id/title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/title_enable_tcpdump"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/title_icon" />
+
+        <Switch
+             android:id="@+id/switch_tcpdump_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+       	android:id="@+id/wifi_layout" >
+
+        <ImageView 
+ 	        android:id="@+id/title_wifi_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/Wifi_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/title_wifi_icon" />
+
+        <Switch
+             android:id="@+id/switch_wifi_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+       	android:id="@+id/bluetooth_layout" >
+
+        <ImageView 
+ 	        android:id="@+id/title_BT_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/bluetooth_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@+id/title_BT_icon" />
+
+        <Switch
+            android:id="@+id/switch_BT_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

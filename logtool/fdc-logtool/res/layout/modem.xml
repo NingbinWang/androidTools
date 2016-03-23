@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_text_height" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/modem"
+            android:textColor="@color/snow"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/modem_Offline_logging_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@id/title_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_icon"
+            android:text="@string/title_enable_modem_dump"
+            android:textSize="@dimen/general_option_text_size" />
+
+        <Switch
+            android:id="@+id/switch_logging_over_HSI_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/at_command_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@id/title_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_icon"
+            android:text="@string/title_atcmdsender"
+            android:textSize="@dimen/general_option_text_size" />
+
+        <Switch
+            android:id="@+id/main_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/modem_size_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/title_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_icon"
+            android:text="@string/title_modem_size"
+            android:textSize="@dimen/general_option_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/modem_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/title_level_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_level_icon"
+            android:text="@string/title_modem_setting"
+            android:textSize="@dimen/general_option_text_size" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:text="@string/modemcrash"
+            android:textSize="@dimen/general_option_text_size" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+</LinearLayout>

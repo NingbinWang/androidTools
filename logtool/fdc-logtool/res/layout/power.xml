@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    
+ 	<RelativeLayout 
+ 	     android:layout_width="match_parent"
+       	 android:layout_height="@dimen/title_text_height"
+ 	    >
+ 	    
+ 	    
+ 	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/power"
+	        android:textColor="@color/snow"
+	        android:textSize="@dimen/title_text_size"
+	        android:layout_marginLeft="10dp"
+	        android:layout_centerVertical="true"/>
+ 	    
+ 	</RelativeLayout>
+    	
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/power_layout">
+
+        <ImageView 
+ 	        android:id="@+id/title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/power_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/title_icon" />
+
+        <Switch
+            android:id="@+id/power_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/battery_layout">
+
+        <ImageView 
+ 	        android:id="@+id/battery_title_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/battery_log"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/battery_title_icon" />
+
+        <Switch
+            android:id="@+id/battery_switch_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" 
+        android:id="@+id/battery_gauge_level_layout">
+
+        <ImageView 
+ 	        android:id="@+id/battery_gauge_level_icon"
+ 	        android:layout_width="@dimen/general_icon_width"
+        	android:layout_height="@dimen/general_icon_height"
+        	android:src="@drawable/arrow"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/content"
+        	android:layout_marginLeft="5dp" 
+ 	        /> 
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/gauage_log_level"
+            android:textSize="@dimen/general_option_text_size"
+            android:layout_toRightOf="@id/battery_gauge_level_icon" />
+
+         <Switch
+            android:id="@+id/switch_battery_gauge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
+    
+</LinearLayout>

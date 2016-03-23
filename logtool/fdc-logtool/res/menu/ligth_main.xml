@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+       <item
+        android:id="@+id/action_output_log"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/output_file"
+         android:title="@string/output_log"
+       /> 
+       
+       
+       <item
+        android:id="@+id/action_clear"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_menu_delete"
+        android:title="@string/clear_log"
+	   />
+      
+      
+       <item
+       android:id="@+id/action_output_upload"
+       android:orderInCategory="100"
+       android:showAsAction="always"
+       android:icon="@drawable/upload"
+       android:title="@string/upload_log"
+     />
+            
+     <item
+       android:id="@+id/action_auto_upload"
+       android:orderInCategory="100"
+       android:showAsAction="always"
+       android:checkable="true"
+             android:checked="false"
+       android:icon="@drawable/auto_upload"
+       android:title="@string/title_enable_auto_upload_logs"
+      />
+       
+</menu>

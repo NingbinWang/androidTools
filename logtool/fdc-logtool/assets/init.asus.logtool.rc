@@ -1,0 +1,83 @@
+ #logtool#
+
+on property:persist.asuslog.fac.init=1
+    start init_factorylog
+
+on property:persist.asuslog.logtool.clear=1
+    start logtool_clear
+
+#logcommand
+service logcommand /system/bin/logcommand
+    class main
+    disabled
+    oneshot
+
+service init_factorylog /system/bin/sh /system/etc/init_factorylogtool.sh
+    disabled
+    oneshot
+
+service logtool_clear /system/bin/sh /system/etc/logtool_clear.sh
+    disabled
+    oneshot
+
+service logbackup /system/bin/sh /system/etc/packlogs.sh
+    class late_start
+    user root
+    group sdcard_rw
+    oneshot
+    disabled
+    seclabel u:r:dumpstate:s0
+
+service logTcpdump /system/bin/dumps tcpdump
+    user root
+    group root
+    class main
+    disabled
+
+#service diag_mdlog /system/bin/diag_mdlog -f /system/etc/Diag.cfg -o /sdcard/Asuslog/Modem/ -s 200 -n 3 -c
+service diag_mdlog /system/bin/sh /system/etc/modemlog.sh
+    class late_start
+    disabled
+    oneshot
+
+service diag_mdlog_stop /system/bin/diag_mdlog -k
+    class late_start
+    disabled
+    oneshot
+
+service ss_ramdump /system/bin/subsystem_ramdump
+    class main
+    user system
+    group system
+    disabled
+
+on property:persist.asuslog.tcpdump.enable=1
+    start logTcpdump
+
+on property:persist.asuslog.tcpdump.enable=0
+    stop logTcpdump
+
+on property:persist.asuslog.qxdmlog.enable=1
+    insmod /system/lib/modules/diagchar.ko
+    start diag_mdlog
+
+on property:persist.asuslog.qxdmlog.enable=0
+    start diag_mdlog_stop
+    write /sys/power/wake_unlock diag_fwrite
+
+on property:persist.asuslog.modem.ramdumps=1
+    insmod /system/lib/modules/diagchar.ko
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+    start ss_ramdump
+
+on property:persist.asuslog.modem.ramdumps=0
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
+    stop ss_ramdump
+
+on property:persist.asuslog.qpst.enable=1
+    write /sys/module/msm_poweroff/parameters/download_mode 1
+
+on property:persist.asuslog.qpst.enable=0
+    write /sys/module/msm_poweroff/parameters/download_mode 0
+
+#logtool#

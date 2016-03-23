@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entry_trace_level">
+        <item>bb_sw</item>
+        <item>bb_sw , 3g_sw</item>
+        <item>bb_sw , 3g_sw , digrf</item>
+    </string-array>
+    <string-array name="entry_value_trace_level">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="entry_file_location">
+        <item>SDCARD - store in /sdcard/Logs/</item>
+    </string-array>
+    <string-array name="entry_value_file_location">
+        <item>1</item>
+    </string-array>
+    <string-array name="entry_file_size">
+        <item>20MB per file</item>
+        <item>200MB per file</item>
+    </string-array>
+    <string-array name="entry_value_file_size">
+        <item>20000</item>
+        <item>200000</item>
+    </string-array>
+    <string-array name="rotate_number">
+        <item>3</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+    
+    <string-array name="modem_open_port">
+ 	    <item name="modem_option_0">0</item>
+ 	    <item name="modem_option_2">2</item>          
+ 	</string-array>
+    
+    <string-array name="atcommands_array">
+        </string-array>
+    <string-array name="atcommands_array2">
+        <item>AT+CGSMS</item>
+        <item>AT+CMGD</item>
+        <item>AT+CMGF</item>
+        <item>AT+CMGL</item>
+        <item>AT+CMGR</item>
+        <item>AT+CMGS</item>
+        <item>AT+CMGW</item>
+        <item>AT+CMMS</item>
+        <item>AT+CMSS</item>
+        <item>AT+CNMA</item>
+        <item>AT+CNMI</item>
+        <item>AT+CPMS</item>
+        <item>AT+CSCA</item>
+        <item>AT+CSCB</item>
+        <item>AT+CSMS</item>
+        <item>AT+CSDH</item>
+        <item>AT+CSAS</item>
+        <item>AT+CRES</item>
+        <item>AT+CMGC</item>
+        <item>AT+CSMP</item>
+        <item>AT+CGREG</item>
+        <item>AT+COPN</item>
+        <item>AT+COPS</item>
+        <item>AT+CREG</item>
+        <item>AT+CSQ</item>
+        <item>AT+CPLS</item>
+        <item>AT+CPOL</item>
+        <item>AT+CHUP</item>
+        <item>AT+CMOD</item>
+        <item>AT+CMUT</item>
+        <item>AT+CTFR</item>
+        <item>AT+VTS</item>
+        <item>AT+CSTA</item>
+        <item>AT+CVHU</item>
+        <item>AT+VTD</item>
+        <item>AT+CCWE</item>
+        <item>AT+CR</item>
+        <item>AT+CRC</item>
+        <item>AT+CAOC</item>
+        <item>AT+CCFC</item>
+        <item>AT+CCWA</item>
+        <item>AT+CHLD</item>
+        <item>AT+CLCC</item>
+        <item>AT+CLCK</item>
+        <item>AT+CLIP</item>
+        <item>AT+CLIR</item>
+        <item>AT+CNAP</item>
+        <item>AT+COLP</item>
+        <item>AT+COLR</item>
+        <item>AT+CPWD</item>
+        <item>AT+CSSN</item>
+        <item>AT+CUSD</item>
+        <item>AT+CCUG</item>
+        <item>AT+CBST</item>
+        <item>AT+CEER</item>
+        <item>AT+CGACT</item>
+        <item>AT+CGANS</item>
+        <item>AT+CGATT</item>
+        <item>AT+CGAUTO</item>
+        <item>AT+CGCLASS</item>
+        <item>AT+CGCMOD</item>
+        <item>AT+CGDATA</item>
+        <item>AT+CGDCONT</item>
+        <item>AT+CGDSCONT</item>
+        <item>AT+CGEQMIN</item>
+        <item>AT+CGEQNEG</item>
+        <item>AT+CGEQREQ</item>
+        <item>AT+CGEREP</item>
+        <item>AT+CGPADDR</item>
+        <item>AT+CGQMIN</item>
+        <item>AT+CGQREQ</item>
+        <item>AT+CGTFT</item>
+        <item>AT+FCLASS</item>
+        <item>AT+CRLP</item>
+        <item>AT+CBC</item>
+        <item>AT+CCID</item>
+        <item>AT+CCLK</item>
+        <item>AT+CFUN</item>
+        <item>AT+CGMI</item>
+        <item>AT+CGMM</item>
+        <item>AT+CGMR</item>
+        <item>AT+CGSN</item>
+        <item>AT+CIMI</item>
+        <item>AT+CMEE</item>
+        <item>AT+CMUX</item>
+        <item>AT+CNUM</item>
+        <item>AT+CPIN</item>
+        <item>AT+CPWROFF</item>
+        <item>AT+CRSM</item>
+        <item>AT+CSCS</item>
+        <item>AT+CSIM</item>
+        <item>AT+CSVM</item>
+        <item>AT+CTZR</item>
+        <item>AT+CTZU</item>
+        <item>AT+IPR</item>
+        <item>AT+TRACE</item>
+        <item>AT+CGED</item>
+        <item>AT+CPIN2</item>
+        <item>AT+CONNECTPORT</item>
+        <item>AT+CAMM</item>
+        <item>AT+CACM</item>
+        <item>AT+CCHO</item>
+        <item>AT+CCHC</item>
+        <item>AT+NEER</item>
+        <item>AT+CUAD</item>
+        <item>AT+FMR</item>
+        <item>AT+CLAC</item>
+        <item>AT+CPUC</item>
+        <item>AT+CLAN</item>
+        <item>AT+CGLA</item>
+        <item>AT+CRLA</item>
+        <item>AT+CPAS</item>
+        <item>AT+SETLITRACE</item>
+        <item>AT+CPBR</item>
+        <item>AT+CPBS</item>
+        <item>AT+CPBW</item>
+        <item>AT+CPBF</item>
+        <item>AT+STKPROF</item>
+        <item>AT+SATR</item>
+        <item>AT+SATE</item>
+        <item>AT+STKCTRLIND</item>
+        <item>AT+SATD</item>
+    </string-array>
+</resources>

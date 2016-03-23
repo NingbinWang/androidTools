@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    
+
+     
+    
+     <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+         >
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical">
+            
+	        <include layout="@layout/general_log" android:id="@+id/general_log_id"/>
+		    <include layout="@layout/modem" android:id="@+id/modem_id"/>
+		    <include layout="@layout/audio" android:id="@+id/audio_id"/>
+		    <include layout="@layout/network" android:id="@+id/network_id"/>
+		    <include layout="@layout/qpstdownloadmode" android:id="@+id/QPSTDownloadMode_id"/>
+		    <include layout="@layout/uploade" android:id="@+id/log_uploader_id"/>
+		  
+            
+        </LinearLayout>
+	    
+	   
+    </ScrollView >
+  
+</LinearLayout>

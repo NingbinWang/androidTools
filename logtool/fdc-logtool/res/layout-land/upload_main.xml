@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- add ScrollView by Joey_Lee -->
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/welcomString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/welcomString"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/reasonpicker"
+                style="?android:attr/dropDownSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/other_field_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/comment_title"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/other_field"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="top"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:maxLength="1000"
+                android:padding="5dip" />
+
+            <TextView
+                android:id="@+id/text_reporter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/username"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_reporter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ems="10"
+                android:maxLength="50"
+                android:padding="5dip" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/send_button"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_bottom" />
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_bottom" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

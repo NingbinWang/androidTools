@@ -1,0 +1,133 @@
+<resources>
+
+    
+    <string name="title_activity_main">Issue Report</string>
+
+    <string name="reason_title_ui1">UI lag</string>
+    <string name="reason_title_ui2">UI force close</string>
+    <string name="reason_title_ui3">DDS fail</string>
+    <string name="reason_title_system1">Auto reboot</string>
+    <string name="reason_title_system2">Device freeze</string>
+    <string name="reason_title_power1">Power drains quickly</string>
+    <string name="reason_title_power2">Power overheat</string>
+    <string name="reason_title_touch1">Device touch fail</string>
+    <string name="reason_title_call1">Can not make calls</string>
+    <string name="reason_title_call2">Drop calls</string>
+    <string name="reason_title_call3">Call no radio</string>
+    <string name="reason_title_call4">Call no audio</string>
+    <string name="reason_title_call5">Call poor audio quality</string>
+    <string name="reason_title_network1">Can not connect mobile data</string>
+    <string name="reason_title_network2">Can not connect wifi</string>
+    <string name="reason_title_other">Other</string>
+
+    <string name="comment_title">Comment</string>
+
+    <string name="upload_bottom">Submit</string>
+    <string name="cancel_bottom">Cancel</string>
+    <string name ="processing_bottom">Processing</string>
+
+    <string name="username">Reporter</string>
+
+    <string name="ui_category">UI</string>
+    <string name="system_category">System</string>
+    <string name="power_category">Power</string>
+    <string name="touch_category">Touch</string>
+    <string name="call_category">Call</string>
+    <string name="network_category">Network</string>
+    <string name="other_category">Other</string>
+    <string name="welcomString">Issue Type</string>
+
+    <string name="string_setting_pref_wifionly_title">Enable 3G Upload</string>
+    <string name="string_setting_pref_wifionly_summaryon">Using 3G and Wifi to upload logs</string>
+    <string name="string_setting_pref_wifionly_summaryoff">Using Wifi only to upload logs</string>
+
+    <string name="error_network_dialog_title">Network error</string>
+    <string name="error_network_dialog_message">Network is not available now, the log will be uploaded later</string>
+
+    <string name="error_manual_allowance_dialog_title">Create Log error</string>
+    <string name="error_manual_allowance_dialog_message">Log is uploading. Please wait for one minute before next action</string>
+
+    <string name="error_comment_empty_title">Unknown Issue</string>
+    <string name="error_comment_empty_message">You should write some comments when the issue type is \"other.\"</string>
+
+    <string name="first_start_title">Hint</string>
+    <string name="first_start_message">You can enable uploading logs using 3G data connection. Check the settings button on right-top corner.</string>
+
+    <string name="download_ticker">Uploading logs  ...</string>
+
+    <string name="prompt_bug">Problem</string>
+
+    <!-- for ASDF abnormal reboot dialog by joey_lee@asus.com -->
+    <string name="asdf_alert">Alert</string>
+    <string name="asdf_alert_content">System has detected your abnormal rebooting.\n
+        a. Please choose "No" if you long-pressed POWER KEY by accident, it was a normal shutdown.\n
+        b. Please choose "Yes" if you long-pressed POWER KEY because of system hung up, it was an abnormal shutdown.</string>
+    <string name="asdf_yes">Yes</string>
+    <string name="asdf_no">No</string>
+
+    <string-array name="bug_category">
+        <item>@string/ui_category</item>
+        <item>@string/system_category</item>
+        <item>@string/power_category</item>
+        <item>@string/touch_category</item>
+        <item>@string/call_category</item>
+        <item>@string/network_category</item>
+        <item>@string/other_category</item>
+    </string-array>
+
+    <string-array name="reason_UI">
+        <item>@string/reason_title_ui1</item>
+        <item>@string/reason_title_ui2</item>
+        <item>@string/reason_title_ui3</item>
+    </string-array>
+    <string-array name="reason_system">
+        <item>@string/reason_title_system1</item>
+        <item>@string/reason_title_system2</item>
+    </string-array>
+    <string-array name="reason_power">
+        <item>@string/reason_title_power1</item>
+        <item>@string/reason_title_power2</item>
+    </string-array>
+    <string-array name="reason_touch">
+        <item>@string/reason_title_touch1</item>
+    </string-array>
+    <string-array name="reason_call">
+        <item>@string/reason_title_call1</item>
+        <item>@string/reason_title_call2</item>
+        <item>@string/reason_title_call3</item>
+        <item>@string/reason_title_call4</item>
+        <item>@string/reason_title_call5</item>
+    </string-array>
+    <string-array name="reason_network">
+        <item>@string/reason_title_network1</item>
+        <item>@string/reason_title_network2</item>
+    </string-array>
+        <string-array name="reason_other">
+        <item>@string/reason_title_other</item>
+    </string-array>
+
+   <string-array name="bug_list">
+       <item>@string/reason_title_ui1</item>
+       <item>@string/reason_title_ui2</item>
+       <item>@string/reason_title_ui3</item>
+       <item>@string/reason_title_system1</item>
+       <item>@string/reason_title_system2</item>
+       <item>@string/reason_title_power1</item>
+       <item>@string/reason_title_power2</item>
+       <item>@string/reason_title_touch1</item>
+       <item>@string/reason_title_call1</item>
+       <item>@string/reason_title_call2</item>
+       <item>@string/reason_title_call3</item>
+       <item>@string/reason_title_call4</item>
+       <item>@string/reason_title_call5</item>
+       <item>@string/reason_title_network1</item>
+       <item>@string/reason_title_network2</item>
+       <item>@string/reason_title_other</item>
+   </string-array>
+
+   <string name="preference_dialog_title">LogUploader Preference</string>
+   <string name="preference_dialog_summary">Upload log by</string>
+   <string name="preference_dialog_option_any">3G and Wifi</string>
+   <string name="preference_dialog_option_wifi_only">Wifi only</string>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    
+    <RadioButton
+        android:id="@+id/radioButtonLevel0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gauage_log_level_0" 
+        android:layout_marginLeft="10dp"/>
+        
+    <RadioButton
+        android:id="@+id/radioButtonLevel4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gauage_log_level_4" 
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonLevel8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gauage_log_level_8"
+        android:layout_marginLeft="10dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonLevel12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gauage_log_level_12"
+        android:layout_marginLeft="10dp" />
+</RadioGroup>
+</LinearLayout>
