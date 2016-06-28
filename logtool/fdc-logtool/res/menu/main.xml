@@ -68,6 +68,14 @@
                 android:orderInCategory="100"
                 android:showAsAction="always"
                 android:title="@string/title_enable_auto_upload_logs"/>
+             <item
+                android:id="@+id/action_enable_upload"
+                android:checkable="true"
+                android:checked="false"
+                android:icon="@drawable/auto_upload"
+                android:orderInCategory="100"
+                android:showAsAction="always"
+                android:title="@string/title_enable_upload_logs"/>
             <item
                 android:id="@+id/action_disk_low_reminder"
                 android:checkable="true"

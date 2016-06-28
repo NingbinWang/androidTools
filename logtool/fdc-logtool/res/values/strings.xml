@@ -45,6 +45,8 @@
       <string name="activity_log">Activity Log</string>
       <string name="camera_dump">Camera Dump</string>
       <string name="window_log">Window Log</string>
+      <string name="uartlog_log">Uartlog_log</string>
+       <string name="usb_diag">Usb_diag</string>
       <string name="cpu_log">Cpu Information</string>
       <string name="cpu_loading_log">Cpu Loading</string>
      <string name="audio_log">Audio Log</string>
@@ -71,7 +73,7 @@
     <string name="auto_update_log">Auto Update Log Folder</string>
     <string name="default_log">Restore Default Log</string>
     <string name="add_tag">add tag to log</string>
-    <string name="version_number">201510190000</string>
+    <string name="version_number">201606230000</string>
     <string name="rotate_num">Reset</string>
     <string name="at_plus">AT+</string>
     <string name="title_activity_atcommand">Asus AT Command</string>
@@ -112,6 +114,7 @@
     
     <string name="title_enable_QPSTDownloadMode_log">Enable Download Mode</string>
     <string name="title_enable_auto_upload_logs">Auto Upload logs</string>
+    <string name="title_enable_upload_logs">Enable Upload logs</string>
     <string name="title_enable_disk_low_reminder">Disk Low Reminder</string>
     <string name="device_model_title">Model Number:</string>
     <string name="sku_info_title">SKU Info:</string>
@@ -178,6 +181,7 @@
     <string name="setTime">设置测试时长（秒）</string>
     <string name="qmesa_reset">重置</string>
     <string name="modemcrash">make modem crash</string>
+    <string name="title_enable_modem_cfg">modem GCF</string>
     <string name="set_cmd">Set Command</string>
     <string name="cmd_example">for example: （0x4b 0x25 0x03 0x00 0x02）or (75 37 3 0 2) </string>
 </resources>

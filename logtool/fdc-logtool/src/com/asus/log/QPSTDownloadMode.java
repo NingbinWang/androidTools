@@ -17,6 +17,8 @@ import com.asus.fdclogtool.R;
 import com.asus.tool.DumpSyslog;
 import com.asus.tool.Util;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 
 public class QPSTDownloadMode extends BaseLog implements OnCheckedChangeListener{
 
@@ -49,12 +51,14 @@ public class QPSTDownloadMode extends BaseLog implements OnCheckedChangeListener
 			if(isChecked){
 				SystemProperties.set("persist.asuslog.qpst.enable","1");
 				if(Util.isUserBuild())
-					Util.setCmd("am broadcast -a \"com.asus.QPST.fw\"");
+					mActivity.sendBroadcast(new Intent("com.asus.QPST.fw"));
+					//Util.setCmd("am broadcast -a \"com.asus.QPST.fw\"");
 			}
 			else{
   				SystemProperties.set("persist.asuslog.qpst.enable","0");
 				if(Util.isUserBuild())
-					Util.setCmd("am broadcast -a \"com.asus.QPST.fw\"");
+					mActivity.sendBroadcast(new Intent("com.asus.QPST.fw"));
+					//Util.setCmd("am broadcast -a \"com.asus.QPST.fw\"");
 			}
 		}		
 	}

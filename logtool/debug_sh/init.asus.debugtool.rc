@@ -3,9 +3,9 @@ on early-init
     mkdir /asdf
 
 on fs
-    wait /dev/block/bootdevice/by-name/asdf
-    mount ext4 /dev/block/bootdevice/by-name/asdf /asdf nosuid nodev barrier=1
-    chmod 0777 /asdf
+    #wait /dev/block/bootdevice/by-name/asdf
+    #mount ext4 /dev/block/bootdevice/by-name/asdf /asdf nosuid nodev barrier=1
+    #chmod 0777 /asdf
     restorecon_recursive /asdf
     start check_last
     
@@ -25,7 +25,12 @@ on post-fs-data
     mkdir /data/anr
     mkdir /data/tombstones
     mkdir /data/media/asus_log
-   
+
+    mkdir /data/ramdump
+    chown system system /data/ramdump
+    restorecon /data/ramdump 
+    #chmod 0775 /data/ramdump 
+
     chown system system /data/log
     chown system system /data/anr
     chown system system /data/tombstones
@@ -97,6 +102,9 @@ service check-datalog /system/bin/sh /system/etc/init.asus.checkdatalog.sh
     oneshot
 seclabel u:r:system_app:s0
 
+on property:debug.asus.startlogcat=1
+    setprop persist.asus.startlog 1
+
 on property:persist.asus.startlog=1
     start check-datalog
     start console
@@ -104,7 +112,6 @@ on property:persist.asus.startlog=1
 
 on property:persist.asus.startlog=0
     start check-datalog
-    stop  console
     write /sys/module/msm_rtb/parameters/enable 0
 
 on property:persist.asus.asusklog=0

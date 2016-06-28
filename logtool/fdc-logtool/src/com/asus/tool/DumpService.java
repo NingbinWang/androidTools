@@ -600,9 +600,9 @@ public class DumpService extends Service {
                     }
                }
 	     if(strings != null && strings.length > 1){
-		ModemCrash.tips = strings[1];
-		Toast.makeText(context, strings[1], Toast.LENGTH_SHORT).show();
-		DialogLogReceiver.showDialog(context, strings[1]);
+		ModemCrash.tips = strings[2];
+		Toast.makeText(context, strings[2], Toast.LENGTH_SHORT).show();
+		DialogLogReceiver.showDialog(context, strings[2]);
 	     }
 	     //else{
 		//Toast.makeText(context, "modem crash !!!", Toast.LENGTH_SHORT).show();

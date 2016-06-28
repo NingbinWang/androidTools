@@ -31,6 +31,7 @@ public class CrashLogServie extends Service  {
 	
 	public static final String CRASH_REMINDER_ENABLE="ACTION_CRASH_LOG_REMINDER_ENABLE";
 	public static final String CRASH_REMINDER_DISABLE="ACTION_CRASH_LOG_REMINDER_DISABLE";
+	public static final String LOGTOOL_INSTALLED="com.asus.loguploader.action.LOGTOOL_INSTALLED";
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -41,6 +42,7 @@ public class CrashLogServie extends Service  {
 		IntentFilter intentFilter=new IntentFilter();
 		intentFilter.addAction(CRASH_REMINDER_ENABLE);
 		intentFilter.addAction(CRASH_REMINDER_DISABLE);
+		intentFilter.addAction(LOGTOOL_INSTALLED);
 		registerReceiver(mReceiver, intentFilter);
 		
 		createFileObserver();
@@ -79,10 +81,16 @@ public class CrashLogServie extends Service  {
 		public void onReceive(Context context, Intent intent) {
 			String action=intent.getAction();
 			if(action.equals(CRASH_REMINDER_ENABLE)){
+				Log.v(TAG, "CRASH_REMINDER_ENABLE");
 				createFileObserver();
 				onStartWatch();
-			}else if(action.equals(CRASH_REMINDER_DISABLE)){	
+			}else if(action.equals(CRASH_REMINDER_DISABLE)){
+				Log.v(TAG, "CRASH_REMINDER_DISABLE");
 				onStopWatch();
+			}else if(action.equals(LOGTOOL_INSTALLED)){
+				Log.v(TAG, "LOGTOOL_INSTALLED");
+				createFileObserver();
+				onStartWatch();
 			}
 			
 		}

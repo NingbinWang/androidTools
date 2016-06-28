@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+		
+	<TableRow  android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<CheckBox android:id="@+id/cpu_thermal_cb" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_cpu_temp">
+		</CheckBox>
+	</TableRow>		
+	<TableRow  android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<CheckBox android:id="@+id/pmic_thermal_cb" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_PMIC_temp">
+		</CheckBox>
+	</TableRow>	
+	<TableRow  android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<CheckBox android:id="@+id/battery_thermal_cb" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_battery_temp">
+		</CheckBox>
+	</TableRow>		
+	
+				
+</TableLayout>

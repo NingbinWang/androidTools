@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+        <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:text="@string/hello"
+        android:textSize="90sp"
+        android:visibility="gone" />
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/selectionCTSItems"
+            style="@id/textView"
+            android:layout_width="270dp"
+            android:layout_height="fill_parent"
+            android:gravity="top" />
+
+ 		<Button
+            android:id="@+id/goBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:paddingBottom="3dp"
+            android:paddingTop="0dp"
+            android:text="@string/go"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+    
+    <TableRow>
+
+    	<TextView
+    	    android:text="@string/option_val"
+    	    android:textSize="40px" />
+
+    	<TextView
+    	    android:text="@string/button_val"
+    	    android:textSize="40px" />
+    	
+    	<TextView
+    	    android:text="@string/state_val"
+    	    android:textSize="40px" />
+
+    	<TextView
+    	    android:text="@string/error_msg"
+    	    android:textSize="40px" />
+    </TableRow>
+    
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_thermal_cpu"
+            android:textSize="40px" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/button_thermal_cpu"
+            android:layout_width="100px"
+            android:layout_height="wrap_content" 
+            android:textOn="On"
+            android:textOff="Off"
+            />
+        
+        <TextView
+            android:id="@+id/text_cpu_state_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:text="@string/text_state_msg"
+            android:textSize="40px"
+            android:width="100dp" />
+        
+        <TextView
+            android:id="@+id/text_cpu_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="8"
+            android:text="@string/text_err_msg"
+            android:textSize="40px" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_thermal_gpu"
+            android:textSize="40px" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/button_thermal_gpu"
+            android:layout_width="100px"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:id="@+id/text_gpu_state_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:text="@string/text_state_msg"
+            android:textSize="40px"
+            android:width="100dp" />
+        
+        <TextView
+            android:id="@+id/text_gpu_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="8"
+            android:text="@string/text_err_msg"
+            android:textSize="40px" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_thermal_bat"
+            android:textSize="40px" />
+
+        <ToggleButton
+            android:id="@+id/button_thermal_bat"
+            android:layout_width="100px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_bat_state_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:text="@string/text_state_msg"
+            android:textSize="40px"
+            android:width="100dp" />
+                
+        <TextView
+            android:id="@+id/text_bat_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="8"
+            android:text="@string/text_err_msg"
+            android:textSize="40px" />
+
+
+    </TableRow>
+
+     <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_test"
+            android:textSize="40px" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/button_test"
+            android:layout_width="100px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_test_state_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:text="@string/text_state_msg"
+            android:textSize="40px"
+            android:width="100dp" />
+        
+        <TextView
+            android:id="@+id/text_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="8"
+            android:text="@string/text_err_msg"
+            android:textSize="40px" />
+
+    </TableRow>
+
+
+    
+</TableLayout>

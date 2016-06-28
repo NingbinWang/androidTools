@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ScrollView android:id="@+id/h_pattern_scroller"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+		<TextView android:id="@+id/h_pattern_textview"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:text="@string/text_null" android:textSize="24px" />
+
+	</ScrollView>
+	<ImageButton android:id="@+id/panel_test_button" android:visibility = "gone"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		></ImageButton>
+	<SurfaceView android:id="@+id/camera_preview"
+		android:layout_width="1px" android:layout_height="1px" />
+</LinearLayout>

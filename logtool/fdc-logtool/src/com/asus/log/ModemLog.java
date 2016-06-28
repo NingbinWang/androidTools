@@ -66,7 +66,9 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 	public static final String KEY_SYSTEM_PROXY = "persist.system.at-proxy.mode";
 	public static final String KEY_SYSTEM_CFG = "persist.asuslog.modem.diacfg";
 	public static final String MODEM_RAMDUMP = "persist.asuslog.modem.ramdumps";
-
+	public static final String MODEM_CFG = "persist.asus.gcf.mode";
+	
+	private Switch mModemcfgSwitch;
 	private Switch mModemOfflineSwitch;
 	private Switch mModemCrashSwitch;
 	static final String AT_END = "\r\n";
@@ -193,9 +195,18 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 		mModemCrashSwitch.setOnCheckedChangeListener(this);
 		view.findViewById(R.id.at_command_layout).setOnClickListener(this);
 		view.findViewById(R.id.RelativeLayout01).setOnClickListener(this);
+		
+		mModemcfgSwitch = (Switch) view.findViewById(R.id.switch_modem_cfg_id);
+		String value=SystemProperties.get(MODEM_CFG, "0");
+		if(value.equals("1"))
+			mModemcfgSwitch.setChecked(true);
+		else
+			mModemcfgSwitch.setChecked(false);
+		mModemcfgSwitch.setOnCheckedChangeListener(this);
+		view.findViewById(R.id.modem_cfg_layout).setOnClickListener(this);
 	}
 
-	@Override
+	@Override 
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.modem_Offline_logging_layout:
@@ -333,6 +344,17 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 					});
 			modemcrash_builder.show();
 			break;
+		case R.id.modem_cfg_layout:
+			boolean cfg_state = mModemcfgSwitch.isChecked();
+			mModemcfgSwitch.setChecked(cfg_state = !cfg_state);
+			if(cfg_state){
+				SystemProperties.set(MODEM_CFG, "1");
+			}
+			else 
+				SystemProperties.set(MODEM_CFG, "0");
+			Toast.makeText(mActivity, "Reboot DUT to enable modem cfg",
+					Toast.LENGTH_SHORT).show();
+			break;	
 		default:
 			break;
 		}
@@ -344,8 +366,8 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 		builder.setTitle(R.string.title_modem_setting);
 		View view = mActivity.getLayoutInflater().inflate(
 				R.layout.modem_setting, null);
-		final RadioButton radioButtonLevelbb = (RadioButton) view
-				.findViewById(R.id.radioButtonLevelbb);
+		//final RadioButton radioButtonLevelbb = (RadioButton) view
+		//		.findViewById(R.id.radioButtonLevelbb);
 		final RadioButton radioButtonLevel3g = (RadioButton) view
 				.findViewById(R.id.radioButtonLevel3g);
 		final RadioButton radioButtonLeveldigrf = (RadioButton) view
@@ -366,26 +388,23 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 		// checkboxSystemProxy.setChecked(false);
 		// }
 
-		if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg")
-				.equals("/system/etc/Diag.cfg")) {
-			radioButtonLevelbb.setChecked(true);
-		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg")
+		if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/modem_and_audio.cfg")
 				.equals("/system/etc/modem_and_audio.cfg")) {
 			radioButtonLevel3g.setChecked(true);
-		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg")
+		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/modem_and_audio.cfg")
 				.equals("/system/etc/gps.cfg")) {
 			radioButtonLeveldigrf.setChecked(true);
-		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg")
+		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/modem_and_audio.cfg")
 				.equals("/system/etc/audio.cfg")) {
 			radioButtonLeveldigrf1.setChecked(true);
-		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg")
+		} else if (SystemProperties.get(KEY_SYSTEM_CFG, "/system/etc/modem_and_audio.cfg")
 				.equals("/system/etc/Compact_mode.cfg")) {
 			radioButtonCompact.setChecked(true);
 		} else {
 			if (Util.isUserBuild())
 				radioButtonCompact.setChecked(true);
 			else
-				radioButtonLevelbb.setChecked(true);
+				radioButtonLevel3g.setChecked(true);
 		}
 
 		builder.setView(view);
@@ -393,10 +412,7 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
-				if (radioButtonLevelbb.isChecked()) {
-					SystemProperties
-							.set(KEY_SYSTEM_CFG, "/system/etc/Diag.cfg");
-				} else if (radioButtonLevel3g.isChecked()) {
+				if (radioButtonLevel3g.isChecked()) {
 					SystemProperties.set(KEY_SYSTEM_CFG,
 							"/system/etc/modem_and_audio.cfg");
 				} else if (radioButtonLeveldigrf.isChecked()) {
@@ -477,6 +493,7 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 		super.onSelectAll();
 		mModemOfflineSwitch.setChecked(true);
 		mModemCrashSwitch.setChecked(true);
+		mModemcfgSwitch.setChecked(true);
 	}
 
 	@Override
@@ -485,6 +502,7 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 		super.onCancelAll();
 		mModemOfflineSwitch.setChecked(false);
 		mModemCrashSwitch.setChecked(false);
+		mModemcfgSwitch.setChecked(false);
 	}
 
 	public static void log(String message) {
@@ -575,6 +593,17 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		
+		if(buttonView == mModemcfgSwitch){
+			if(isChecked)
+				SystemProperties.set(MODEM_CFG, "1");
+			else 
+				SystemProperties.set(MODEM_CFG, "0");
+			Toast.makeText(mActivity, "Reboot DUT to enable modem cfg",
+					Toast.LENGTH_SHORT).show();
+			return;
+		}
+		
 		if (buttonView == mModemOfflineSwitch) {
 			if (isChecked) {
 				String dir = "/sdcard/Asuslog/Modem";
@@ -678,7 +707,7 @@ public class ModemLog extends BaseLog implements OnCheckedChangeListener,
 			break;
 		case MSG_MODEM_SWITCH_FAIL:
 			closeDialog();
-			// openLogDialog("Modem Warning","Modem 忙碌中...,如有插上SIM卡,建議請先拔掉SIM卡,再重新進行測試;或者先拔掉SIM卡,重新開機,重新測試");
+			// openLogDialog("Modem Warning","Modem 韫囨瑧顣辨稉锟�...,婵″倹婀侀幓鎺嶇瑐SIM閸楋拷,瀵ら缚顒╃挏瀣帥閹锋梹甯�SIM閸楋拷,閸愬秹鍣搁弬浼达拷鑼额攽濞擃剝鈹�;閹存牞锟藉懎鍘涢幏鏃�甯�SIM閸楋拷,闁插秵鏌婇梺瀣熂,闁插秵鏌婂〒顒冣攤");
 			break;
 		case MSG_MODEM_CONNECT_FAIL:
 

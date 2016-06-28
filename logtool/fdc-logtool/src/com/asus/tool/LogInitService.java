@@ -55,7 +55,10 @@ public class LogInitService extends Service{
 		}
 		
 		Util.setCmd("echo --update_package=/cache/update.zip > /cache/recovery/command");
-		DialogLogReceiver.showDialog_next(context, "Are you sure to update sbl1.mbn and tz.mbn");
+		if(SystemProperties.get("persist.asuslog.qpst.enable","0").equals("1"))
+			DialogLogReceiver.showDialog_next(context, "Are you sure to flash apdp.mbn and msadp.mbn");
+		else
+			DialogLogReceiver.showDialog_next(context, "Are you sure to erase apdp.mbn and msadp.mbn");
 	}
 	
 	@Override

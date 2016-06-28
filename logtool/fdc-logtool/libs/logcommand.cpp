@@ -25,6 +25,7 @@ int main(int argc, char **argv)
         char match = '>';
 	char match1 = 'f';
 	char match2 = ' ';
+	char match3 = 't';
         char *ptr = NULL;
 	char *ptr1 = NULL;
         char cmd1[] = "top -n 1 -t";
@@ -43,11 +44,13 @@ int main(int argc, char **argv)
 	char cmd14[] = "QMESA_64 kill";
 	char cmd15[] = "\"/data/debug/raw_sender";
 	char cmd16[] = "\"/system/bin/raw_sender";
+	char cmd17[] = "cp -rf /sdcard/bt";
+	char cmd18[] = "am broadcast -a \"com.asus.loguploader.action.LOGTOOL_INSTALLED\"";
 	property_get(KEY_LOG_CMD,szCmd,"");
 	if(0 == strcmp(szCmd, cmd3) || 0 == strcmp(szCmd, cmd4) || 0 == strcmp(szCmd, cmd10) 
 	      || 0 == strcmp(szCmd, cmd6) || 0 == strcmp(szCmd, cmd7) || 0 == strcmp(szCmd, cmd5)
 	      || 0 == strcmp(szCmd, cmd9) || 0 == strcmp(szCmd, cmd11) || 0 == strcmp(szCmd, cmd12)
-	      || 0 == strcmp(szCmd, cmd13) || 0 == strcmp(szCmd, cmd14)){
+	      || 0 == strcmp(szCmd, cmd13) || 0 == strcmp(szCmd, cmd14) || 0 == strcmp(szCmd, cmd17) ){
 	      if(0 == strcmp(szCmd, cmd11)){
 		  system("/data/debug/raw_sender 0x4b 0x12 0x21 0x0d  0xc8 0x00 0x00 0x00  0x00 0x20 0x00 0x00");
 	      }else if(0 == strcmp(szCmd, cmd12)){
@@ -76,6 +79,7 @@ int main(int argc, char **argv)
 	      }else{
 		  system(szCmd);
 	      }
+
 	      return 0;
         }
         ptr = strchr(szCmd, match);
@@ -117,6 +121,18 @@ int main(int argc, char **argv)
               	szCmd_temp[i-1] = szCmd[i];
               }
               system(szCmd_temp);
+           }
+	}
+
+	ptr1 = strchr(szCmd, match3);
+	if(ptr1){
+	   int index = ptr1 - szCmd; 
+           char temp[30] = {0};
+           for(i = 0; i < index+1; i++){
+              temp[i] = szCmd[i];
+           }
+           if(0 == strcmp(temp, cmd17)){
+              system(szCmd);
            }
 	}
 	return 0;

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_timer"
+			android:textSize = "40px">
+		</TextView>
+		<ToggleButton android:id="@+id/button_timer"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>	
+		<TextView android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textSize = "20px"
+			android:text="@string/text_timer_current">
+		</TextView>		
+		<TextView android:layout_width="100px" android:id="@+id/text_timer_current_output"
+			android:layout_height="wrap_content"
+			android:textSize = "20px"
+			android:text="@string/text_time_format">
+		</TextView>		
+			
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_timer_history"
+			android:textSize = "20px">
+		</TextView>			
+		<TextView android:layout_width="100px" android:id="@+id/text_timer_history_output"
+			android:layout_height="wrap_content"
+			android:textSize = "40px"
+			android:text="@string/text_time_format">
+		</TextView>
+
+	</TableRow>
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_logger"
+			android:textSize = "40px">
+		</TextView>
+		<ToggleButton android:id="@+id/button_log"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>	
+	</TableRow>
+	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_monitor"
+			android:textSize = "40px">
+		</TextView>
+		<Button android:id="@+id/button_monitor" android:text="@string/text_set"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>	
+	</TableRow>	
+	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_disable_screen_lock"
+			android:textSize = "40px">
+		</TextView>
+		<ToggleButton android:id="@+id/button_stayon"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>			
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_bat"
+			android:textSize = "40px">
+		</TextView>
+		<ToggleButton android:id="@+id/button_bat"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>	
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "fill_vertical">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/text_pad_bat"
+			android:textSize = "40px">
+		</TextView>
+		<ToggleButton android:id="@+id/button_pad_bat"
+			android:layout_width="100px" android:layout_height="wrap_content" 
+			/>	
+	</TableRow>
+
+	
+</TableLayout>

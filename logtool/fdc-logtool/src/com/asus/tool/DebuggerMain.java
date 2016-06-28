@@ -1,127 +1,69 @@
 package com.asus.tool;
 
 import java.io.BufferedReader;
-
 import java.io.File;
-
 import java.io.FileInputStream;
-
 import java.io.IOException;
-
 import java.io.InputStreamReader;
-
 import java.io.PrintWriter;
-
 import java.util.ArrayList;
-
 import java.util.TreeMap;
 
 import com.asus.log.QPSTDownloadMode;
-
 import com.asus.log.AudioLog;
-
 import com.asus.log.BaseLog;
-
 import com.asus.log.GeneralLog;
-
 import com.asus.log.MemoryDiskCpu;
-
 import com.asus.log.ModemLog;
-
 import com.asus.log.NetWorkLog;
-
 import com.asus.log.OtherLog;
-
 import com.asus.log.PowerLog;
-
 import com.asus.log.UploadeLog;
-
 import com.asus.fdclogtool.R;
 
 import android.media.MediaScannerConnection;
-
 import android.media.MediaScannerConnection.MediaScannerConnectionClient;
-
 import android.net.LocalSocket;
-
 import android.net.LocalSocketAddress;
-
 import android.net.Uri;
-
 import android.net.wifi.WifiManager.WifiLock;
-
 import android.os.AsyncTask;
-
 import android.os.Build;
-
 import android.os.Bundle;
-
 import android.os.Environment;
-
 import android.os.Handler;
-
 import android.os.IBinder;
-
 import android.os.Message;
-
 import android.os.RemoteException;
-
 import android.R.bool;
 import android.R.integer;
-
 import android.app.Activity;
 import android.app.ActivityManager;
-
 import android.app.AlertDialog;
-
 import android.app.AlertDialog.Builder;
-
 import android.app.ProgressDialog;
-
 import android.content.BroadcastReceiver;
-
 import android.content.ComponentName;
-
 import android.content.ContentResolver;
-
 import android.content.Context;
-
 import android.content.ContextWrapper;
-
 import android.content.DialogInterface;
-
 import android.content.Intent;
-
 import android.content.IntentFilter;
-
 import android.content.ServiceConnection;
-
 import android.content.DialogInterface.OnClickListener;
-
 import android.content.pm.PackageParser.NewPermissionInfo;
-
 import android.content.res.AssetManager;
-
 import android.util.Log;
-
 import android.view.Menu;
-
 import android.view.MenuItem;
-
 import android.view.View;
-
 import android.view.WindowManager;
-
 import android.widget.EditText;
-
 import android.widget.LinearLayout;
-
 import android.widget.ProgressBar;
-
 import android.widget.Toast;
-
 import android.os.SystemProperties;
-
 import android.provider.VoicemailContract;
 
 public class DebuggerMain extends Activity implements OnClickListener,
@@ -153,6 +95,7 @@ public class DebuggerMain extends Activity implements OnClickListener,
 	public static final String KEY_TITLE = "KEY_TITLE";
 	public static final String KEY_MSG = "KEY_MSG";
 	public static final String KEY_AUTO_UPLOAD = "persist.asus.autoupload.enable";
+	public static final String KEY_ENABLE_UPLOAD = "persist.asus.mupload.enable";	
 	public static final String KEY_PREV_FOLDER = "persist.asuslog.prevrootpath";
 	public String dirPath = SystemProperties.get("persist.asuslog.savedir",
 			"/sdcard/Asuslog/");
@@ -220,6 +163,10 @@ public class DebuggerMain extends Activity implements OnClickListener,
 					.equals("null"))
 				SystemProperties.set("persist.asuslog.fw.update", "0");
 		}
+		
+		//first boot up，the phone can't get the correct property,patch it.
+		SystemProperties.set("debug.asus.startlogcat","1");
+		
 		setContentView(R.layout.log_main);
 		if (LightVersionMain.mBuildLight) {
 			Toast.makeText(this, "build light version error",
@@ -383,7 +330,11 @@ public class DebuggerMain extends Activity implements OnClickListener,
 		if (BaseLog.getPropCheck(KEY_AUTO_UPLOAD)) {
 			setMenuCheck(menu, R.id.action_auto_upload, true);
 		}
-
+		
+		if (BaseLog.getPropCheck(KEY_ENABLE_UPLOAD)) {
+			setMenuCheck(menu, R.id.action_enable_upload, true);
+		}		
+		
 		if (Settings.isAutoUpdateMtp() == false) {
 			setMenuCheck(menu, R.id.action_auto_refresh_mtp, false);
 		}
@@ -469,8 +420,21 @@ public class DebuggerMain extends Activity implements OnClickListener,
 		} else {
 			BaseLog.setPropCheck(KEY_AUTO_UPLOAD, false);
 		}
+		//sendBroadcast(new Intent("com.asus.loguploader.action.RESET_AUTO_UPLOAD_TIME -e resetTime \"15:30\""));
+		sendBroadcast(new Intent("com.asus.loguploader.action.LOGTOOL_INSTALLED"));
+		//Util.setCmd("am broadcast -a \"com.asus.loguploader.action.LOGTOOL_INSTALLED\"");
 	}
-
+	
+	private void enableuploadlog(boolean check) {
+		if (check) {
+			BaseLog.setPropCheck(KEY_ENABLE_UPLOAD, true);
+		} else {
+			BaseLog.setPropCheck(KEY_ENABLE_UPLOAD, false);
+		}
+		sendBroadcast(new Intent("com.asus.loguploader.action.LOGTOOL_INSTALLED"));
+		//Util.setCmd("am broadcast -a \"com.asus.loguploader.action.LOGTOOL_INSTALLED\"");
+	}
+	
 	public static void setSaveDefaultPath() {
 		SystemProperties.set(DumpService.KEY_SAVE_DIR,
 				DumpService.DEFAULT_ROOT_PATH);
@@ -559,6 +523,10 @@ public class DebuggerMain extends Activity implements OnClickListener,
 		case R.id.action_auto_upload:
 			item.setChecked(!item.isChecked());
 			autoloadLog(item.isChecked());
+			break;
+		case R.id.action_enable_upload:
+			item.setChecked(!item.isChecked());
+			enableuploadlog(item.isChecked());
 			break;
 		case R.id.action_output_clear:
 			item.setChecked(!item.isChecked());
@@ -828,7 +796,7 @@ public class DebuggerMain extends Activity implements OnClickListener,
 			}
 			if (delFile.isDirectory()) {
 				recursiveDeleteFile(delFile, clearNotWrite);
-			} else {// 涓�埇鏂囦欢
+			} else {// 濞戞搫鎷烽崺鍥棘閸ワ附顐�
 				if (clearNotWrite) {
 					delFile.delete();//
 				} else {
@@ -840,7 +808,7 @@ public class DebuggerMain extends Activity implements OnClickListener,
 		}
 	}
 
-	public boolean recursiveDeleteFile(File file, boolean clearNotWrite) {// 閲濆皪璩囨枡澶�
+	public boolean recursiveDeleteFile(File file, boolean clearNotWrite) {// 闁叉繂鐨挬鍥ㄦ灐婢讹拷
 		File[] files = file.listFiles();
 		boolean dirAllowDel = true;
 
@@ -850,8 +818,8 @@ public class DebuggerMain extends Activity implements OnClickListener,
 				if (result == false) {
 					dirAllowDel = false;
 				}
-			} else {// 涓�埇鏂囦欢
-					// 鐣欎笅涓嶅彲瀵殑妾旀
+			} else {// 濞戞搫鎷烽崺鍥棘閸ワ附顐�
+					// 闁伙絾鐟ょ粭鍛▔瀹ュ懎璁查悗娈垮亞濞堟垵顬婇弮锟介、锟�
 				if (clearNotWrite) {
 					delFile.delete();//
 				} else {
@@ -1048,7 +1016,7 @@ public class DebuggerMain extends Activity implements OnClickListener,
 			String output) {
 		final Builder dialog = new AlertDialog.Builder(context);
 		dialog.setTitle(title);
-		// 寤虹珛閬告搰鐨勪簨浠�
+		// 瀵よ櫣鐝涢柆鍛婃惏閻ㄥ嫪绨ㄦ禒锟�
 		dialog.setMessage(output);
 		dialog.setNeutralButton(
 				context.getResources().getString(android.R.string.ok),

@@ -15,13 +15,19 @@ public class UploadeLog extends BaseLog implements OnCheckedChangeListener{
 	private static final String TAG = "UploadeLog";
 	
 	private Switch mUploadSwitch;
+	private Switch enableUploadSwitch;
 	private String KEY_AUTO_UPLOAD="persist.asus.autoupload.enable";
+	private String KEY_ENABLE_UPLOAD="persist.asus.mupload.enable";
 	public UploadeLog(Activity activity, View view) {
 		super(activity, view);
 		mUploadSwitch=(Switch) view.findViewById(R.id.switch_upload_id);
+		enableUploadSwitch=(Switch) view.findViewById(R.id.switch_enable_upload_id);
 		view.findViewById(R.id.upload_layout).setOnClickListener(this);
+		view.findViewById(R.id.enable_upload_layout).setOnClickListener(this);
 		mUploadSwitch.setChecked(getPropCheck(KEY_AUTO_UPLOAD));
 		mUploadSwitch.setOnCheckedChangeListener(this);
+		enableUploadSwitch.setChecked(getPropCheck(KEY_ENABLE_UPLOAD));
+		enableUploadSwitch.setOnCheckedChangeListener(this);
 	}
 
 	@Override
@@ -34,7 +40,13 @@ public class UploadeLog extends BaseLog implements OnCheckedChangeListener{
 			mUploadSwitch.setChecked(state=!state);
 		
 			break;
-	
+
+		case R.id.enable_upload_layout:
+			
+			boolean enable_state=enableUploadSwitch.isChecked();
+			enableUploadSwitch.setChecked(enable_state=!enable_state);
+		
+			break;
 		default:
 			break;
 		}
@@ -46,6 +58,7 @@ public class UploadeLog extends BaseLog implements OnCheckedChangeListener{
 		// TODO Auto-generated method stub
 		super.onSelectAll();
 		mUploadSwitch.setChecked(true);
+		enableUploadSwitch.setChecked(true);
 	}
 
 	@Override
@@ -53,6 +66,7 @@ public class UploadeLog extends BaseLog implements OnCheckedChangeListener{
 		// TODO Auto-generated method stub
 		super.onCancelAll();
 		mUploadSwitch.setChecked(false);
+		enableUploadSwitch.setChecked(false);
 	}
 	
 	public static void log(String message){
@@ -64,6 +78,13 @@ public class UploadeLog extends BaseLog implements OnCheckedChangeListener{
 		// TODO Auto-generated method stub
 		if(buttonView==mUploadSwitch){
 			setPropCheck(KEY_AUTO_UPLOAD, isChecked);
+			Log.v(TAG, "mUploadSwitch");
 		}
+		
+		if(buttonView==enableUploadSwitch){
+			setPropCheck(KEY_ENABLE_UPLOAD, isChecked);
+			Log.v(TAG, "enableUploadSwitch");
+		}
+		
 	}
 }

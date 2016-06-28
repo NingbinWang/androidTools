@@ -5,6 +5,17 @@ modemlogcount=`getprop persist.asuslog.modem.count`
 modemlogpath=`getprop persist.asuslog.modem.path`
 modemcfgpath=`getprop persist.asuslog.modem.diacfg`
 
+#Add-Begin by terry_tao 2015/11/30
+#fix not capture modem logs when reboot device due to /sdcard/ hasn't been created
+sdcardpath="/sdcard/"
+count=1000
+while [ ! -d $sdcardpath ] && [ $count -gt 0 ]
+do
+  ((count--))
+  usleep 200000
+done
+#Add-End by terry_tao 2015/11/30
+
 if [ ! -n "$modemlogsize" ]; then
   modemlogsize='200'
 fi
@@ -29,8 +40,8 @@ else
 fi
 
 if [ ! -n "$modemcfgpath" ]; then
-  modemcfgpath='/system/etc/Diag.cfg'
-  setprop persist.asuslog.modem.diacfg "/system/etc/Diag.cfg"
+  modemcfgpath='/system/etc/modem_and_audio.cfg'
+  setprop persist.asuslog.modem.diacfg "/system/etc/modem_and_audio.cfg"
 fi 
 
 if [ "$modemcfgpath" = "/system/etc/Diag.cfg" ]; then

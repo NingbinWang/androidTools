@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Unit test for thermal</string>
+    <string name="go">開始測試</string>
+    
+    <string name="app_name">Asus TLT V2.1.0</string>
+    <string name="text_panel">面板</string>
+    <string name="text_cpu_type">CPU : </string>
+    <string name="text_os">OS : </string>
+    <string name="text_model">Model : </string>
+    <string name="text_build">Build : </string>    
+    <string name="text_kernel">Kernel : </string> 
+    <string name="text_cpu_usage">CPU使用量 : </string>   
+    <string name="text_memory_usage">Memory使用量 : </string>  
+    <string name="text_cpu_aging">CPU : </string>
+    <string name="text_memory_aging">Memory : </string>
+    <string name="text_sdcard_aging">SDCard : </string>
+    <string name="text_emmc_aging">EMMC : </string>  
+    <string name="text_panel_test">Panel : </string> 
+    <string name="text_touch_test">Touch : </string>      
+    <string name="text_audio_aging">Audio 放音 : </string>
+    <string name="button_audio_left_aging_on">ON(左聲道)</string>  
+    <string name="button_audio_left_aging_off">OFF(左聲道)</string>  
+    <string name="button_audio_center_aging_on">ON(雙聲道)</string>  
+    <string name="button_audio_center_aging_off">OFF(雙聲道)</string>  
+    <string name="button_audio_right_aging_on">ON(右聲道)</string>  
+    <string name="button_audio_right_aging_off">OFF(右聲道)</string>                      
+    <string name="text_record_aging">Audio 錄音 : </string>
+    <string name="text_record_state">測試完成次數(30秒) : </string>    
+    <string name="text_record_running">測試中 </string> 
+    <string name="text_camera_record_aging">Camera 錄影 : </string>
+    <string name="text_camera_record_id">鏡頭選擇 : </string>
+    
+        
+    <string name="cpueater_error">CPU aging 發生錯誤</string>
+    <string name="memtester_error">Memory aging 發生錯誤</string> 
+    <string name="text_test">測試</string>  
+    <string name="text_sdcard_create">SDcard 建立檔案中</string>  
+    <string name="text_sdcard_read">SDcard 讀取檔案中</string>  
+    <string name="text_sdcard_write">SDcard 檔案寫入中</string>  
+    <string name="text_sdcard_delete">SDcard 檔案刪除中</string>    
+    <string name="text_sdcard_error">發生錯誤 ( sdcard folder error !)</string>
+    <string name="text_sdcard_start">SDcard aging start </string>
+    <string name="text_emmc_start">Emmc aging start</string>
+    <string name="text_emmc_error">發生錯誤 ( emmc folder error ! )</string>    
+    <string name="text_audio_error">Audio aging 發生錯誤 </string>
+  
+       
+    <string name="text_error">發生錯誤</string>
+    <string name="text_timer">計時器 : </string>  
+    <string name="text_timer_current">本次記錄 : </string>
+    <string name="text_timer_history">歷史記錄 : </string>
+    <string name="text_logger">log : </string>         
+    <string name="text_bat">battery : </string>
+    <string name="text_pad_bat">Pad_battery : </string>
+    
+    <string name="text_bt_aging">BT : </string>
+    <string name="text_wifi_aging">WiFi : </string>  
+ 
+    <string name="text_sensor0_thermal">Sensor0 溫度 : </string>  
+    <string name="text_modem_thermal">MODEM溫度:</string>
+    <string name="text_gpu_thermal">GPU溫度:</string>
+    <string name="text_camera_thermal">Camera溫度:</string>
+    <string name="text_cpu0_thermal">CPU0溫度:</string>
+    <string name="text_cpu1_thermal">CPU1溫度:</string>
+    <string name="text_cpu2_thermal">CPU2溫度:</string>
+    <string name="text_cpu3_thermal">CPU3溫度:</string>
+    <string name="text_cpu4_thermal">CPU4溫度:</string>
+    <string name="text_cpu5_thermal">CPU5溫度:</string>
+    <string name="text_cpu6_thermal">CPU6溫度:</string>
+    <string name="text_cpu7_thermal">CPU7溫度:</string>
+
+    <string name="text_cpu0_cur_freq">CPU0 freq:</string>
+    <string name="text_cpu1_cur_freq">CPU1 freq:</string>
+    <string name="text_cpu2_cur_freq">CPU2 freq:</string>
+    <string name="text_cpu3_cur_freq">CPU3 freq:</string>
+    <string name="text_cpu4_cur_freq">CPU4 freq:</string>
+    <string name="text_cpu5_cur_freq">CPU5 freq:</string>
+    <string name="text_cpu6_cur_freq">CPU6 freq:</string>
+    <string name="text_cpu7_cur_freq">CPU7 freq:</string>
+    <string name="text_current">Current : </string>  
+
+	<string name="text_run_all">Run All : </string>
+	<string name="text_thermal_cpu">Thermal-CPU : </string>
+	<string name="text_thermal_gpu">Thermal-GPU : </string>
+	<string name="text_thermal_bat">Thermal-Bat : </string>
+	<string name="text_err_msg">Error Msg : </string>
+	<string name="text_state_msg">State : </string>
+	<string name="text_show_test">Test Start!! </string>
+	
+	<string name="text_volt">電壓 : </string>
+    <string name="text_pcb_thermal">PCB 溫度 : </string>  
+    <string name="text_battery_thermal">電池 溫度 : </string>
+	<string name="pa_temp">PA 溫度 : </string> 
+	<string name="pmic_temp">CHG 溫度 : </string> 
+    <string name="xo_temp">XTAL 溫度 : </string> 
+	<string name="case_temp">Therm 溫度 : </string> 
+	<string name="option_val">測項: </string> 
+	<string name="button_val">Button</string> 
+	<string name="state_val">State: </string> 
+	<string name="error_msg">Error Msg: </string> 
+ 
+    <string name="text_pa_therm">PA溫度 : </string>
+    <string name="text_log_start">Log Path (/sdcard/log.csv) </string>
+    <string name="text_bat_start">Bat Path (/sdcard/hhmmss_ddMMyyyy_bat.csv) </string>      
+    <string name="text_pad_bat_start">PAD_Bat Path (/sdcard/hhmmss_ddMMyyyy_pad_bat.csv) </string>
+	<string name="text_monitor">Monitor : </string>    
+
+ <string name="text_set">設定</string>    
+    <string name="text_disable_screen_lock">關閉螢幕鎖 :  </string>    
+    <string name="text_time_format">0:0:0</string>    
+    <string name="text_null"></string>   
+    <string name="text_cpu_temp">CPU 溫度 : </string>    
+    <string name="text_PMIC_temp">PMIC 溫度 : </string>    
+    <string name="text_battery_temp">電池 溫度 : </string>                 
+    <string name="text_toggle_button">ToggleButton</string>
+
+     <string name="chg_therm_l">CHG_THERM_L:</string>    
+    <string name="adc_pin5">ADC_PIN5 :  </string>    
+    <string name="adc_pin6">ADC_PIN6 :</string>     
+    <string name="case_thermal">CASE_THERM : </string>    
+    <string name="quiet_therm">QUIET_THERM : </string>    
+    <string name="pa_therm0">PA_THERM0 : </string>                 
+    <string name="camera_sensor">ToggleButton</string>                
+    <string name="rear_temp">Rear_Temp :</string>  
+</resources>

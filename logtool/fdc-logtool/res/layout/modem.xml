@@ -196,5 +196,41 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/gainsboro" />
+    
+    <RelativeLayout
+        android:id="@+id/modem_cfg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true" >
 
+        <ImageView
+            android:id="@id/title_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_icon"
+            android:text="@string/title_enable_modem_cfg"
+            android:textSize="@dimen/general_option_text_size" />
+
+        <Switch
+            android:id="@+id/switch_modem_cfg_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    
 </LinearLayout>

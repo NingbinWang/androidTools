@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@+id/widget28"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_cpu_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_cpu_aging"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<Spinner
+			android:id="@+id/cpu_spinnner"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Spinner>			
+	</TableRow>
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_memory_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_memory_aging"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<Spinner
+			android:id="@+id/mem_spinnner"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Spinner>				
+		
+	</TableRow>	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_panel_test"
+		    android:textSize = "25px"/>
+		<Button android:id="@+id/button_panel_test"
+			android:text="@string/text_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+	</TableRow>	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_sdcard_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_sdcard_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<TextView 
+			android:layout_span="5" 
+			android:id="@+id/text_sdcard_state"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content" 
+		    android:textSize = "20px"/>			
+	</TableRow>
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_emmc_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_emmc_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<TextView 
+			android:layout_span="5" 
+			android:id="@+id/text_emmc_state"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content" 
+		    android:textSize = "20px"/>			
+	</TableRow>	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_record_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_record_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<TextView 
+			android:layout_span="5" 
+			android:id="@+id/text_record_state"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content" 
+		    android:textSize = "20px"/>					
+	</TableRow>	
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_audio_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_audio_left_aging"
+			android:textOn = "@string/button_audio_left_aging_on"
+			android:textOff = "@string/button_audio_left_aging_off"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<ToggleButton android:id="@+id/button_audio_center_aging"
+			android:textOn = "@string/button_audio_center_aging_on"
+			android:textOff = "@string/button_audio_center_aging_off"		
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		<ToggleButton android:id="@+id/button_audio_right_aging"
+			android:textOn = "@string/button_audio_right_aging_on"
+			android:textOff = "@string/button_audio_right_aging_off"		
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>						
+	</TableRow>		
+	<TableRow android:layout_width="fill_parent" android:visibility="gone"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_wifi_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_wifi_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+	</TableRow>	
+	
+	<TableRow android:layout_width="fill_parent" android:visibility="gone"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_bt_aging"
+		    android:textSize = "25px"/>
+		<ToggleButton android:id="@+id/button_bt_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		
+	</TableRow>	
+	
+	<TableRow android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity = "center_vertical"
+		>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="@string/text_touch_test"
+		    android:textSize = "25px"/>
+		<Button android:id="@+id/button_touch_test"
+			android:text="@string/text_test"
+		    android:layout_width="120px"
+			android:layout_height="wrap_content" 
+			/>
+		
+	</TableRow>		
+	
+</TableLayout>

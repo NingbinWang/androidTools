@@ -46,9 +46,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fdc-logtool/assets/modemlog.sh:/system/etc/modemlog.sh \
     $(LOCAL_PATH)/fdc-logtool/assets/gps_qxdm_log.cfg:/system/etc/gps.cfg \
     $(LOCAL_PATH)/fdc-logtool/assets/audio.cfg:/system/etc/audio.cfg \
-    $(LOCAL_PATH)/fdc-logtool/assets/modem_and_audio.cfg:/system/etc/modem_and_audio.cfg \
+    $(LOCAL_PATH)/fdc-logtool/assets/A60K_DIAG_V16.cfg:/system/etc/modem_and_audio.cfg \
     $(LOCAL_PATH)/fdc-logtool/assets/logtool_clear.sh:/system/etc/logtool_clear.sh \
-    $(LOCAL_PATH)/fdc-logtool/assets/Compact_mode.cfg:/system/etc/Compact_mode.cfg \
+    $(LOCAL_PATH)/fdc-logtool/assets/A60K_DIAG_V16_NRT.cfg:/system/etc/Compact_mode.cfg \
     $(LOCAL_PATH)/fdc-logtool/assets/raw_sender:/system/bin/raw_sender \
     $(LOCAL_PATH)/fdc-logtool/assets/init.asus.logtool.rc:root/init.asus.logtool.rc \
     $(LOCAL_PATH)/debug_sh/init.asus.check_last.sh:system/etc/init.asus.check_last.sh \

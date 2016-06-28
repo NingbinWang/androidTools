@@ -66,4 +66,40 @@
         android:layout_height="1dp"
         android:background="@color/gainsboro" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_option_height"
+        android:background="@drawable/bg_pressed"
+        android:clickable="true"
+        android:id="@+id/enable_upload_layout" >
+
+         <ImageView
+            android:id="@id/title_icon"
+            android:layout_width="@dimen/general_icon_width"
+            android:layout_height="@dimen/general_icon_height"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content"
+            android:src="@drawable/arrow" 
+            android:layout_marginLeft="5dp" />
+         
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/title_enable_upload_logs"
+            android:textSize="@dimen/general_option_text_size"
+             android:layout_toRightOf="@id/title_icon" />
+
+        <Switch
+            android:id="@+id/switch_enable_upload_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
 </LinearLayout>
